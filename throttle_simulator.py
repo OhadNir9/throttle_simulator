@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, RadioButtons
 import numpy as np
-import tkinter as tk
-from tkinter import ttk
 
 """
 radio_min = 1000
