@@ -2,20 +2,8 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, RadioButtons
 import numpy as np
 
-"""
-radio_min = 1000
-radio_max = 2000
-deadzone = 30
-thr_dz = 100
-high_in = 1000
-pilot_speed_dn = 12
-pilot_speed_up = 8
 
-
-radio_trim_low = radio_min + deadzone
-"""
 HIGH_IN = 1000
-
 
 def constrain_int(input, min, max):
     if input < min:
@@ -26,7 +14,6 @@ def constrain_int(input, min, max):
 
 def get_throttle_mid(radio_min, radio_max, radio_trim_low):
     return HIGH_IN * (((radio_min + radio_max)/2) - radio_trim_low) / (radio_max - radio_trim_low)
-
 
 def calculate_pwm_speed_series(radio_min, radio_max, deadzone, thr_dz, pilot_speed_dn, pilot_speed_up):
     pwm_speed_vals = []
